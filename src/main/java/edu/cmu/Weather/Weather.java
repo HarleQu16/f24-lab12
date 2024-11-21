@@ -22,9 +22,9 @@ public class Weather {
     public double getRainfall() {
         double wsRainfall = weatherService.getRainfall();
         if (inches) {
-            return wsRainfall / 25.4;
-        } else {
             return wsRainfall;
+        } else {
+            return wsRainfall * 25.4;
         }
     }
 }
